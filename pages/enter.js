@@ -87,15 +87,17 @@ const UsernameForm = () => {
     }
 
     const checkUserName = useCallback(
-    debounce(async(userName) => {
-        if (userName.length >= 3) {
-            const ref = firestore.doc(`userNames/${userName}`) 
-            const { exists } = ref.get()
-            console.log('firestore read')
-            setIsValid(!exists)
-        }
+
+        debounce(async(userName) => {
+            if (userName.length >= 3) {
+                const ref = firestore.doc(`userNames/${userName}`) 
+                const { exists } = ref.get()
+                console.log('firestore read')
+                setIsValid(!exists)
+            }
+
     }, 500),
-    []) // eslint-disable-line react-hooks/exhaustive-deps
+    [])
 
 
     const onSubmit = async(event) => {
