@@ -14,13 +14,13 @@ const PostItem = ({post, key, admin=false}) => {
     return(
         <div className="card">
 
-            <Link href={`/${post.userName}`}>
+            <Link href={`/${post.userName}`} passHref>
                 <a>
                     <strong>By @{post.userName}</strong>
                 </a>
             </Link>
 
-            <Link href={`/${post.userName}/${post.slug}`}>
+            <Link href={`/${post.userName}/${post.slug}`} passHref>
                 <h2>
                     <a>{post.title}</a>
                 </h2>

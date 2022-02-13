@@ -5,6 +5,7 @@ import { firestore } from '../lib/firebase';
 import debounce from 'lodash.debounce';
 import SignOutButton from '../components/SignOutButton';
 import MetaTags from '../components/MetaTags';
+import Image from 'next/image';
 
 const EnterPage = () => {
 
@@ -41,7 +42,7 @@ const SignInButton = () => {
 
     return(
         <button className='btn-google' onClick={signInWithGoogle}>
-            <img src={'/google.png'}/>
+            <Image src={'/google.png'} alt='google' width={20} height={20}/>
             Sign in with Google
         </button>
     )

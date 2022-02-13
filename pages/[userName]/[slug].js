@@ -30,7 +30,7 @@ const Post = (props) => {
                 </p>
 
                 <AuthCheck fallback={
-                    <Link href='/enter'>
+                    <Link href='/enter' passHref>
                         <button>💗 Create Account</button>
                     </Link>
                 }>
