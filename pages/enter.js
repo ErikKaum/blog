@@ -65,7 +65,7 @@ const UsernameForm = () => {
 
     useEffect(() => {
         checkUserName(formValue)
-    }, [formValue])
+    }, [formValue, checkUserName])
 
     const onChange = (event) => {
         const value = event.target.value.toLowerCase();
@@ -95,7 +95,7 @@ const UsernameForm = () => {
             setIsValid(!exists)
         }
     }, 500),
-    [])
+    []) // eslint-disable-line react-hooks/exhaustive-deps
 
 
     const onSubmit = async(event) => {

@@ -14,7 +14,7 @@ const Custom404 = () => {
                     >
 
                 </iframe>
-                <Link href='/'>
+                <Link href='/' passHref>
                 <button className="btn-blue"> Back Home </button>
                 </Link>
         </main>
